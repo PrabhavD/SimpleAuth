@@ -14,17 +14,17 @@ router.post('/register', (req, res) => {
 
     //Check required fields
     if(!name || !email || !password || !password2 ) {
-        errors.push({ msg: 'Please enter all fields '});
+        errors.push({ msg: 'Please enter all fields' });
     }
 
     //Check if passwords match
     if(password !== password2) {
-        errors.push({ msg: 'Passwords do not match '});
+        errors.push({ msg: 'Passwords do not match' });
     }
 
     //Check password length
     if(password.len < 6) {
-        errors.push({ msg: 'Password must be at least 6 characters'});
+        errors.push({ msg: 'Password must be at least 6 characters' });
     }
 });
 
